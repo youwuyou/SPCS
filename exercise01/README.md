@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
 # Exercise 1.1: Polynomer-Ketten und Random Walks
 
 # Exercise 1-1
@@ -6,10 +10,10 @@
 💡 Modelling sketch
 
 - Coordinate system:
-    - Cartesian coordinates $'\Z^2'$
+    - Cartesian coordinates $\Z^2$
 - Modelling object:
     - polymers
-        - $'\# \text{Segements} = n, \,\, n\in \N'$
+        - $\# \text{Segements} = n, \,\, n\in \N$
         - each segment has the same length
 - Constraints on the model
 
@@ -17,18 +21,18 @@
 
     i). At each grid point a segment can be represented
 
-    $$'
-    x_i= (x^0,x^1),\,\, x^0, x^1\in \Z'
+    $$
+    x_i= (x^0,x^1),\,\, x^0, x^1\in \Z
     $$
 
     ii). No interactions between the segments
 
     iii). Conformation of a polymer
 
-    - $'X-\text{a n-tuple}'$
+    - $X-\text{a n-tuple}$
 
-    $$'
-    X:=(x_0,x_1,...x_{n-1})'
+    $$
+    X:=(x_0,x_1,...x_{n-1})
     $$
 
     - described by a tuple consisting the gitter points which are visited
@@ -44,14 +48,14 @@
 
 - Random walk of length n in 2D
 - math. representation
-    - $'i\in [n]'$ - subscript represented the time step
-    - uniform time steps in directions $'\{ \pm e_x, \pm e_y\}'$
+    - $i\in [n]$ - subscript represented the time step
+    - uniform time steps in directions $\{ \pm e_x, \pm e_y\}$
 
     ⇒  4 directions possible ( ⬅️, ➡️, ⬆️, ⬇️)
 
 
-$$'
-S_t=(x_0,x_1,...,x_{n-1})'
+$$
+S_t=(x_0,x_1,...,x_{n-1})
 $$
 
 - Goal: Observation of the behaviours of a short-chained polymer
