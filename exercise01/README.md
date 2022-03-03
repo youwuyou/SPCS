@@ -33,9 +33,9 @@
 
     - described by a tuple consisting the gitter points which are visited
 
-    ![Untitled](Exercise%201%20RandomWalk/RandomWalk2D.png)
+    ![Untitled](Markdown/RandomWalk2D.png)
 
-    ![Untitled](Exercise%201%20RandomWalk/SimulatingDNA.png)
+    ![Untitled](Markdown/SimulatingDNA.png)
 
 </aside>
 
