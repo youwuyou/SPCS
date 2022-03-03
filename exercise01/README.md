@@ -6,10 +6,15 @@
 💡 Modelling sketch
 
 - Coordinate system:
-    - Cartesian coordinates $\Z^2$
+    - Cartesian coordinates
+
+    ![equation (1).png](Markdown/Z2.png)
+
 - Modelling object:
     - polymers
-        - $\# \text{Segements} = n, \,\, n\in \N$
+
+        ![equation (2).png](Markdown/equation_1.png)
+
         - each segment has the same length
 - Constraints on the model
 
@@ -17,25 +22,21 @@
 
     i). At each grid point a segment can be represented
 
-    $$
-    x_i= (x^0,x^1),\,\, x^0, x^1\in \Z
-    $$
+    ![equation (3).png](Markdown/equation_2.png)
 
     ii). No interactions between the segments
 
     iii). Conformation of a polymer
 
-    - $X-\text{a n-tuple}$
+    - X - a n-tuple
 
-    $$
-    X:=(x_0,x_1,...x_{n-1})
-    $$
+        ![equation (4).png](Markdown/equation_3.png)
 
     - described by a tuple consisting the gitter points which are visited
 
-    ![Untitled](Markdown/RandomWalk2D.png)
+    ![Untitled](Markdown/RandomWalkDNA.png)
 
-    ![Untitled](Markdown/SimulatingDNA.png)
+    ![Untitled](Markdown/RandomWalk2D.png)
 
 </aside>
 
@@ -44,15 +45,19 @@
 
 - Random walk of length n in 2D
 - math. representation
-    - $i\in [n]$ - subscript represented the time step
-    - uniform time steps in directions $\{ \pm e_x, \pm e_y\}$
+
+    ![equation (5).png](Markdown/equation_4.png)
+
+    - subscript represented the time step
+
+        ![equation (6).png](Markdown/equation_5.png)
+
+    - uniform time steps in directions
 
     ⇒  4 directions possible ( ⬅️, ➡️, ⬆️, ⬇️)
 
+    ![equation (7).png](Markdown/equation_6.png)
 
-$$
-S_t=(x_0,x_1,...,x_{n-1})
-$$
 
 - Goal: Observation of the behaviours of a short-chained polymer
     - Not possible to list out all conformations
