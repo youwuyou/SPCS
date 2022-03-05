@@ -1,4 +1,4 @@
-# Exercise 1.1: Polynomer-Ketten und Random Walks
+# Exercise 1.1: Polynomer Chains and Random Walks
 
 # Exercise 1-1
 

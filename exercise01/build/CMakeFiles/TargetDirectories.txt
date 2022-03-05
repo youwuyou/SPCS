@@ -1,0 +1,3 @@
+/home/youwuyou/SPCS/exercise01/build/CMakeFiles/rebuild_cache.dir
+/home/youwuyou/SPCS/exercise01/build/CMakeFiles/edit_cache.dir
+/home/youwuyou/SPCS/exercise01/build/CMakeFiles/exercise01.dir

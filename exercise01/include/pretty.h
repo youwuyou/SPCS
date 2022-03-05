@@ -2,6 +2,9 @@
 // functions receive a matrix and output its data into a file
 #ifndef PRETTY_H
 #define PRETTY_H
+#include <Eigen/Core>
+
+
 
 // csv (comma separated value) - The format used for the output file
 

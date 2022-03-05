@@ -5,6 +5,15 @@
 #include <Eigen/Core>
 #include <cassert>
 #include <iostream>
+#include <iomanip>   // std::setprecision
+
+
+
+// Lambda expression returns the temperature in Kelvin
+auto lambda = [](double celsius)-> double{ return celsius + 273.15;};
+
+
+
 
 int main() {
   ///////////////////////////////////////////////// Aufgabe 1 /////////////////////////////////////////////////////////////////////////
@@ -30,6 +39,8 @@ int main() {
   // d - average end-to-end distance
   // r - gyration radius
   // double average = average_total_length( , );
+
+
   std::cout << "Starting the dependency check..."<< std::endl;
   std::cout << "Please enter the number of the random walks and the number of length wanted. (eg. 1000, 100)"<< std::endl;
 
@@ -48,15 +59,39 @@ int main() {
 
 ///////////////////////////////////////////////// Aufgabe 2 /////////////////////////////////////////////////////////////////////////
 
-  // TODO - to be modified
+  mueller_brown_grid();
+
+  // MEP - minimum energy path
+  // arguments: n = 1000, T = 300 K, x_0 = (0.0, -0.5)
+
+  int iterations;
+  double temperature, x_, y_;
+  Eigen::Vector2d x_0;
+
+  std::cout << "Finding the MEP..."<< std::endl;
+  std::cout << "Please enter the number of iterations and the temperature of the system. (eg. 10000, 300)"<< std::endl;
+  std::cin >> iterations; // user input for the number of iterations and the temperature of the system
+  std::cin >> temperature;
+
+  assert(iterations > 0 && "The number of iterations must be positive!");
+  assert(temperature >= 0 && "The temperature cannot be lower than the absolute zero!");
+
+  std::cout << "Please enter the x,y coordinates of the initial point. (eg. 0.0, -0.5)" << std::endl;
+  std::cin >> x_; // user input for the number of iterations and the temperature of the system
+  std::cin >> y_;
+
+  // assert(x_ >= -3  && x_ < 1.3  &&
+  //        y_ > -1.3 && y_ <= 3   && "Initial point must be on the grid!");
+
+  x_0(0) = x_;
+  x_0(1) = y_;
+
+  Eigen::MatrixXd MEP = metropolis(iterations, temperature, x_0);  // returns 3 by n matrix
+
   // mmc_energies
   // formatting x y E
-  Eigen::MatrixXd N = Eigen::MatrixXd::Random(3, 20);
-  mmc_energies_out(N);
+  mmc_energies_out(MEP);   // store points in a file
 
-
-
-  mueller_brown_grid();
 
   return EXIT_SUCCESS;
 }

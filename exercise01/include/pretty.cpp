@@ -1,7 +1,8 @@
 #include <iostream>
-#include <Eigen/Core>
 #include <fstream>  // for outputting data values
 #include "pretty.h"
+#include <Eigen/Core>
+
 
 // csv (comma separated value) - The format used for the output file
 

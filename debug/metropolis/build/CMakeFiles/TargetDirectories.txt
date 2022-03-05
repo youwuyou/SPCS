@@ -1,0 +1,3 @@
+/home/youwuyou/SPCS/metropolis/build/CMakeFiles/rebuild_cache.dir
+/home/youwuyou/SPCS/metropolis/build/CMakeFiles/edit_cache.dir
+/home/youwuyou/SPCS/metropolis/build/CMakeFiles/converter.dir

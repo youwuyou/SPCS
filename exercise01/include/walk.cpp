@@ -2,6 +2,8 @@
 #include <random>
 #include <utility>
 #include <cmath>
+#include <Eigen/Core>
+
 
 // helper function for the random_walk
   Eigen::Vector2d stepping(const Eigen::Vector2d& current_point){

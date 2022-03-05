@@ -29,7 +29,6 @@ set(sources include/monte_carlo.cpp
 
 add_executable(exercise01 exercise01.cpp ${sources})
 
+# linking Eigen to the executable
 find_package (Eigen3 REQUIRED NO_MODULE)
-
-
 target_link_libraries(exercise01 Eigen3::Eigen)

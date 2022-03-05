@@ -1,6 +1,10 @@
 #include <random>
 #include <fstream>
 #include "monte_carlo.h"
+#include <Eigen/Core>
+#include <iostream>
+#include <cassert>
+
 
 /*
 sample the Müller-Brown potential on a coordinate grid
@@ -11,8 +15,9 @@ void mueller_brown_grid() {
   output << "x y E\n";
 
   for (double x = -3; x < 1.3; x += 0.01) {
-    for (double y = 3; y > -1.3; y -= 0.01)
-      output << x << " " << y << " " << E(coordinates<double>(x, y)) << std::endl;
+    for (double y = 3; y > -1.3; y -= 0.01){
+      output << x << " " << y << " " << E(Eigen::Vector2d(x,y)) << std::endl;
+    }
   }
 
   output.close();
@@ -20,31 +25,88 @@ void mueller_brown_grid() {
 
 /*
 calculate Müller-Brown potential energy for given coordinates
-*/
-double E(coordinates<double> c) {
-  const std::vector<double> A_({ -200., -100., -170., 15.});
-  const std::vector<double> a_({ -1., -1., -6.5, 0.7});
-  const std::vector<double> b_({0., 0., 11., 0.6});
-  const std::vector<double> c_({ -10., -10., -6.5, 0.7});
-  const std::vector<double> x_({1., 0., -0.5, -1.});
-  const std::vector<double> y_({0., 0.5, 1.5, 1.});
+- self-implemented version using Eigen
+- x $\in$ [-3, 1.3], y $\in$ [-1.3, 3]
 
-  // scalling by 0.1 for more realistic value
-  // unit of the potential: [kJ/mol]
-  // TODO: convert the k_B aka E according to the unit used
-  const double E = 0.1 * (
-                             A_[0] * std::exp(a_[0] * pow(c.x() - x_[0], 2)
-                           + b_[0] * (c.x() - x_[0]) * (c.y() - y_[0])
-                           + c_[0] * pow(c.y() - y_[0], 2))
-                           + A_[1] * std::exp(a_[1] * pow(c.x() - x_[1], 2)
-                           + b_[1] * (c.x() - x_[1]) * (c.y() - y_[1])
-                           + c_[1] * pow(c.y() - y_[1], 2))
-                           + A_[2] * std::exp(a_[2] * pow(c.x() - x_[2], 2)
-                           + b_[2] * (c.x() - x_[2]) * (c.y() - y_[2])
-                           + c_[2] * pow(c.y() - y_[2], 2))
-                           + A_[3] * std::exp(a_[3] * pow(c.x() - x_[3], 2)
-                           + b_[3] * (c.x() - x_[3]) * (c.y() - y_[3])
-                           + c_[3] * pow(c.y() - y_[3], 2))
-                   );
-  return E;
+
+*/
+double E(const Eigen::Vector2d& vec) {
+  Eigen::MatrixXd A_(1, 4);
+            A_ << -200., -100.,
+                  -170.,   15.;
+
+  Eigen::MatrixXd a_(4, 1), b_(4, 1), c_(4, 1), x_(4, 1), y_(4, 1);
+
+  a_ <<  -1.,   -1.,  -6.5, 0.7;
+  b_ <<   0.,    0.,   11., 0.6;
+  c_ << -10.,  -10.,  -6.5, 0.7;
+  x_ <<   1.,    0.,  -0.5, -1.;
+  y_ <<   0.,   0.5,   1.5,  1.;
+
+  double x = vec(0), y = vec(1);
+
+  auto scalar = A_ * (
+                            ( a_.array() * (x - x_.array()).square()
+                             + b_.array() * (x - x_.array()) * (y - y_.array())
+                             + c_.array()         * (y - y_.array()).square()
+                            ).exp()
+                      ).matrix();
+
+  // obtain the result from the Eigen::Product
+  double E = scalar(0);
+
+  // if(E < 0) std::cout << "The energy is" << E << std::endl;
+  // assert(E >= 0 && "Energy must be greater or equal to zero!");
+
+  return 0.1 * E; // scaling the result
+}
+
+
+
+
+// PRE:    n   - number of iterations
+//         T   - temperature in Kelvin, effect the rule of rejection in the system
+//         x_0 - initial configuration
+// POST:   obtain a sample from the Boltzmann distribution,
+//         or approximate
+Eigen::MatrixXd metropolis(int n, double T, const Eigen::Vector2d& x_0){
+    Eigen::Vector2d x, y;     // used temporarily
+
+    double p_A;
+
+
+
+    Eigen::MatrixXd result = Eigen::MatrixXd::Zero(3, n);  // we have for each point x, y coordinate and the energy
+    result.col(0) << x_0, E(x_0);    // store the initial step
+
+    for(int i = 1; i < n; ++i){
+
+          // using the algorithms from <random>
+          // Not so sure whether to keep them here or in the loop
+          std::random_device r;
+          std::default_random_engine e(r());
+          std::uniform_real_distribution<double> uniform(0,1);
+          std::uniform_real_distribution<double> uniform_change(-0.05, 0.05);
+
+          x(0) = result.col(i-1)(0); // latest x-position
+          x(1) = result.col(i-1)(1); // latest y-position
+
+          y(0) = x(0) + uniform_change(e);   // move in x direction
+          y(1) = x(1) + uniform_change(e);   // move in y direction
+
+
+          // E is the energy function following the Boltzmann distribution
+          // Recall: k_b_ = 8.314462618e-3 // [kJ/(mol * K)]
+          p_A = std::min(1., std::exp(-(E(y) - E(x)) / k_b_ * T));
+
+          if (p_A > uniform(e)){
+              result.col(i) << y, E(y);
+          }
+          else{
+             // x_0 remains the same
+              result.col(i) << x, E(x);
+          }
+    }
+
+    return result;
 }

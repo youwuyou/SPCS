@@ -3,6 +3,7 @@
 #include <Eigen/Core>
 
 
+
 namespace Directions{
 enum Direction {LEFT  = 0,
                 RIGHT = 1,

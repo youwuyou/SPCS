@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/main.dir/exercise1.cpp.o CMakeFiles/main.dir/include/pretty.cpp.o CMakeFiles/main.dir/include/walk.cpp.o  -o main 
