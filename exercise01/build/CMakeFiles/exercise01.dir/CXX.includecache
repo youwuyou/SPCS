@@ -30,6 +30,18 @@ Eigen/Core
 Eigen/Core
 -
 
+/home/youwuyou/SPCS/exercise01/include/walk.cpp
+walk.h
+/home/youwuyou/SPCS/exercise01/include/walk.h
+random
+-
+utility
+-
+cmath
+-
+Eigen/Core
+-
+
 /home/youwuyou/SPCS/exercise01/include/walk.h
 Eigen/Core
 -

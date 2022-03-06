@@ -28,13 +28,13 @@ Eigen::Vector2d center_of_mass(const Eigen::MatrixXd&);
 // PRE: performs m times the random walk of length n
 // POST: returns the average end-to-end distance
 //       and the gyration radius as a std::pair object
-  std::pair<double, double> properties(int, int);
+std::pair<double, double> properties(int, int);
 
 
 // PRE:   m is the number of random walk performed
 //        n is the length of the random walk for each iteration
 // POST: returns a matrix storing the data values in dependent of different set-ups
 //       of the random walk
-  Eigen::MatrixXd tendency(int, int);
+Eigen::MatrixXd tendency(int, int);
 
 #endif
