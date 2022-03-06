@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/converter.dir/converter.cpp.o CMakeFiles/converter.dir/include/monte_carlo.cpp.o  -o converter 
