@@ -27,7 +27,7 @@ set(sources include/monte_carlo.cpp
 #
 # add_library(MC_lib STATIC ${sources} ${headers})   # added monte carlo lib
 
-add_executable(exercise01 exercise01.cpp ${sources})
+add_executable(exercise01 main.cpp ${sources})
 
 # linking Eigen to the executable
 find_package (Eigen3 REQUIRED NO_MODULE)

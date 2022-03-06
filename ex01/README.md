@@ -1,5 +1,23 @@
 # Exercise 01: Random Walk
 
+## Terminal Commands
+- Program Execution
+
+i). Build the executable using CMake
+
+ii). Run the executable `./exercise01` inside the "build" folder
+
+
+- Visualization
+
+i). Redirect to the "evalutations" folder
+
+ii). Visualizing using
+`python3 plot.py`
+
+
+
+
 ## 1-1). Polynomer Chains and Random Walks
 
 <aside>
