@@ -6,21 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/home/youwuyou/SPCS/exercise01/include/monte_carlo.cpp
-random
--
-fstream
--
-monte_carlo.h
+/home/youwuyou/SPCS/exercise01/exercise01.cpp
+include/monte_carlo.h
 /home/youwuyou/SPCS/exercise01/include/monte_carlo.h
+include/walk.h
+/home/youwuyou/SPCS/exercise01/include/walk.h
+include/pretty.h
+/home/youwuyou/SPCS/exercise01/include/pretty.h
 Eigen/Core
--
-iostream
 -
 cassert
 -
+iostream
+-
+iomanip
+-
 
 /home/youwuyou/SPCS/exercise01/include/monte_carlo.h
+Eigen/Core
+-
+
+/home/youwuyou/SPCS/exercise01/include/pretty.h
+Eigen/Core
+-
+
+/home/youwuyou/SPCS/exercise01/include/walk.h
 Eigen/Core
 -
 
