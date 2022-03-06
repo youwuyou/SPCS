@@ -85,7 +85,16 @@
     - [The Metropolis algorithm (northeastern.edu)](https://web.northeastern.edu/afeiguin/phys5870/phys5870/node80.html)
     - [A Random Walk & Monte Carlo Simulation || Python Tutorial || Learn Python Programming - YouTube](https://www.youtube.com/watch?v=BfS2H1y6tzQ)
 
-# Exercise 1-2: Monte Carlo
+
+
+
+
+
+
+
+
+
+## Exercise 1-2: Monte Carlo
 
 ---
 
