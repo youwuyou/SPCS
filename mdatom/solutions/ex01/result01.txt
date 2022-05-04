@@ -1,0 +1,176 @@
+The program mdatom performs a MD-run for a collection of atoms, using:
+  1. Data characterizing the md-run
+  2. Atomic coordinates and velocities
+
+
+Data characterizing the MD-run:
+# Title
+Sample input file
+#                 NumberAtoms                 AtomicMass                     MDType
+                            2                          1                          0
+#                  BoxSize(x)                 BoxSize(y)                 BoxSize(z)
+                       10.436                     10.436                     10.436
+#               NumberMDSteps                InitialTime                   TimeStep
+                            1                          5                      0.005
+#          InitialTemperature          TargetTemperature    TemperatureCouplingTime
+                            0                      1.095                        0.1
+#                  RandomSeed
+                     10021988
+#            XVInitialization  CoordInitializationSpread              FinalXVOutput
+                            1                          0                          1
+#          NAtomsOnBoxEdge(x)         NAtomsOnBoxEdge(y)         NAtomsOnBoxEdge(z)
+                           10                         10                         10
+#                   EpsilonLJ                    SigmaLJ    InteractionCutoffRadius
+                            1                          1                        2.5
+#    PropertyPrintingInterval    NumberRadialDistrPoints    RadialDistrCutoffRadius
+                            1                        100                        2.5
+#            TrajectoryOutput     TrajectoryOutputFormat   TrajectoryOutputInterval
+                            1                          2                          1
+
+
+Atomic coordinates and velocities:
+
+2 Lennard-Jones atoms at rij=1 nm, coords x
+ The initial temperature is: 0
+
+
+Starting MD iterations...
+
+           STEP           TIME        E-TOTAL      E-KINETIC    E-POTENTIAL         VIRIAL       PRESSURE        SCALE-T
+
+              1              5         0.0036         0.0036              0            -12     0.00704074              1
+
+
+ Averages:
+
+
+           STEP           TIME        E-TOTAL      E-KINETIC    E-POTENTIAL         VIRIAL       PRESSURE        SCALE-T
+
+              1          5.005         0.0036         0.0036              0            -12     0.00704074              1
+
+
+ Root mean square fluctuations:
+
+
+           STEP           TIME        E-TOTAL      E-KINETIC    E-POTENTIAL         VIRIAL       PRESSURE        SCALE-T
+
+              1          5.005              0              0              0              0              0              0
+
+
+ Average temperature is       : 0.144327
+ Root mean square fluctuations: 0
+
+
+ Radial distribution function g(R) :
+
+        R             g(R)
+    0.0125              0
+    0.0375              0
+    0.0625              0
+    0.0875              0
+    0.1125              0
+    0.1375              0
+    0.1625              0
+    0.1875              0
+    0.2125              0
+    0.2375              0
+    0.2625              0
+    0.2875              0
+    0.3125              0
+    0.3375              0
+    0.3625              0
+    0.3875              0
+    0.4125              0
+    0.4375              0
+    0.4625              0
+    0.4875              0
+    0.5125              0
+    0.5375              0
+    0.5625              0
+    0.5875              0
+    0.6125              0
+    0.6375              0
+    0.6625              0
+    0.6875              0
+    0.7125              0
+    0.7375              0
+    0.7625              0
+    0.7875              0
+    0.8125              0
+    0.8375              0
+    0.8625              0
+    0.8875              0
+    0.9125              0
+    0.9375              0
+    0.9625              0
+    0.9875              0
+    1.0125        3443.54
+    1.0375              0
+    1.0625              0
+    1.0875              0
+    1.1125              0
+    1.1375              0
+    1.1625              0
+    1.1875              0
+    1.2125              0
+    1.2375              0
+    1.2625              0
+    1.2875              0
+    1.3125              0
+    1.3375              0
+    1.3625              0
+    1.3875              0
+    1.4125              0
+    1.4375              0
+    1.4625              0
+    1.4875              0
+    1.5125              0
+    1.5375              0
+    1.5625              0
+    1.5875              0
+    1.6125              0
+    1.6375              0
+    1.6625              0
+    1.6875              0
+    1.7125              0
+    1.7375              0
+    1.7625              0
+    1.7875              0
+    1.8125              0
+    1.8375              0
+    1.8625              0
+    1.8875              0
+    1.9125              0
+    1.9375              0
+    1.9625              0
+    1.9875              0
+    2.0125              0
+    2.0375              0
+    2.0625              0
+    2.0875              0
+    2.1125              0
+    2.1375              0
+    2.1625              0
+    2.1875              0
+    2.2125              0
+    2.2375              0
+    2.2625              0
+    2.2875              0
+    2.3125              0
+    2.3375              0
+    2.3625              0
+    2.3875              0
+    2.4125              0
+    2.4375              0
+    2.4625              0
+    2.4875              0
+
+
+ Timing:
+
+  At start of program         : Mon May  2 16:12:04 2022
+  Before main iteration loop  : Mon May  2 16:12:04 2022
+  After main iteration loop   : Mon May  2 16:12:04 2022
+  Now                         : Mon May  2 16:12:04 2022
+  Time spent for MD iterations: 0 sec
+  Time spent in total         : 0 sec

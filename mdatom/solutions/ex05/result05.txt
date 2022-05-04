@@ -1,0 +1,287 @@
+The program mdatom performs a MD-run for a collection of atoms, using:
+  1. Data characterizing the md-run
+  2. Atomic coordinates and velocities
+
+
+Data characterizing the MD-run:
+# Title
+Sample input file
+#                 NumberAtoms                 AtomicMass                     MDType
+                         1000                          1                          0
+#                  BoxSize(x)                 BoxSize(y)                 BoxSize(z)
+                       10.436                     10.436                     10.436
+#               NumberMDSteps                InitialTime                   TimeStep
+                         1500                          0                      0.005
+#          InitialTemperature          TargetTemperature    TemperatureCouplingTime
+                            0                     120.27                        0.1
+#                  RandomSeed
+                     10021988
+#            XVInitialization  CoordInitializationSpread              FinalXVOutput
+                            3                          0                          1
+#          NAtomsOnBoxEdge(x)         NAtomsOnBoxEdge(y)         NAtomsOnBoxEdge(z)
+                           10                         10                         10
+#                   EpsilonLJ                    SigmaLJ    InteractionCutoffRadius
+                            1                          1                        2.5
+#    PropertyPrintingInterval    NumberRadialDistrPoints    RadialDistrCutoffRadius
+                          100                        100                        2.5
+#            TrajectoryOutput     TrajectoryOutputFormat   TrajectoryOutputInterval
+                            0                          2                          5
+
+
+Atomic coordinates and velocities:
+
+Sample input file
+ The initial temperature is: 138.346
+
+
+Starting MD iterations...
+
+           STEP           TIME        E-TOTAL      E-KINETIC    E-POTENTIAL         VIRIAL       PRESSURE        SCALE-T
+
+              1              0       -3598.26        1720.71       -5318.96       -5886.12         4.4618              1
+            100          0.495       -3595.64        1713.78       -5309.42       -6019.11        4.53574              1
+
+
+   Total mass                       :               1000
+   Coordinates of the center of mass:            5.21003        5.22715        5.21675
+   Velocity of the center of mass   :         0.00411342       -0.03896     -0.0399279
+   Translational kinetic energy     :            1.56452
+
+
+           STEP           TIME        E-TOTAL      E-KINETIC    E-POTENTIAL         VIRIAL       PRESSURE        SCALE-T
+
+            200          0.995       -3597.84        1783.76       -5381.59       -5408.43        4.21859              1
+            300          1.495       -3595.89        1766.95       -5362.83       -5493.62         4.2587              1
+
+
+   Total mass                       :               1000
+   Coordinates of the center of mass:            5.21311        5.19793        5.22855
+   Velocity of the center of mass   :         0.00411342       -0.03896     -0.0399279
+   Translational kinetic energy     :            1.56452
+
+
+           STEP           TIME        E-TOTAL      E-KINETIC    E-POTENTIAL         VIRIAL       PRESSURE        SCALE-T
+
+            400          1.995        -3596.6        1773.31       -5369.91       -5601.25        4.32556              1
+
+
+   Total mass                       :               1000
+   Coordinates of the center of mass:             5.2162        5.22089        5.22991
+   Velocity of the center of mass   :         0.00411342       -0.03896     -0.0399279
+   Translational kinetic energy     :            1.56452
+
+
+           STEP           TIME        E-TOTAL      E-KINETIC    E-POTENTIAL         VIRIAL       PRESSURE        SCALE-T
+
+            500          2.495       -3597.61        1752.43       -5350.04       -5682.08        4.36072              1
+            600          2.995        -3596.7        1677.82       -5274.52        -6316.2        4.68891              1
+
+
+   Total mass                       :               1000
+   Coordinates of the center of mass:            5.20885        5.19167        5.16866
+   Velocity of the center of mass   :         0.00411342       -0.03896     -0.0399279
+   Translational kinetic energy     :            1.56452
+
+
+           STEP           TIME        E-TOTAL      E-KINETIC    E-POTENTIAL         VIRIAL       PRESSURE        SCALE-T
+
+            700          3.495       -3596.92        1713.41       -5310.33       -6088.55        4.57625              1
+
+
+   Total mass                       :               1000
+   Coordinates of the center of mass:            5.21193        5.21463        5.20133
+   Velocity of the center of mass   :         0.00411342       -0.03896     -0.0399279
+   Translational kinetic energy     :            1.56452
+
+
+           STEP           TIME        E-TOTAL      E-KINETIC    E-POTENTIAL         VIRIAL       PRESSURE        SCALE-T
+
+            800          3.995       -3598.23        1788.51       -5386.74       -5381.81        4.20577              1
+            900          4.495        -3598.1        1728.04       -5326.14       -5945.55        4.50096              1
+
+
+   Total mass                       :               1000
+   Coordinates of the center of mass:            5.21502        5.21672        5.18182
+   Velocity of the center of mass   :         0.00411342       -0.03896     -0.0399279
+   Translational kinetic energy     :            1.56452
+
+
+           STEP           TIME        E-TOTAL      E-KINETIC    E-POTENTIAL         VIRIAL       PRESSURE        SCALE-T
+
+           1000          4.995       -3596.14         1715.9       -5312.04       -6114.44        4.59291              1
+
+
+   Total mass                       :               1000
+   Coordinates of the center of mass:            5.27028        5.15619        5.17274
+   Velocity of the center of mass   :         0.00411342       -0.03896     -0.0399279
+   Translational kinetic energy     :            1.56452
+
+
+           STEP           TIME        E-TOTAL      E-KINETIC    E-POTENTIAL         VIRIAL       PRESSURE        SCALE-T
+
+           1100          5.495       -3596.05        1725.37       -5321.43       -6009.92        4.53715              1
+           1200          5.995       -3596.92        1767.92       -5364.84       -5582.11        4.31118              1
+
+
+   Total mass                       :               1000
+   Coordinates of the center of mass:            5.18988        5.12697        5.18454
+   Velocity of the center of mass   :         0.00411342       -0.03896     -0.0399279
+   Translational kinetic energy     :            1.56452
+
+
+           STEP           TIME        E-TOTAL      E-KINETIC    E-POTENTIAL         VIRIAL       PRESSURE        SCALE-T
+
+           1300          6.495       -3597.24        1724.71       -5321.95       -5989.18         4.5246              1
+
+
+   Total mass                       :               1000
+   Coordinates of the center of mass:            5.23471        5.19168        5.20678
+   Velocity of the center of mass   :         0.00411342       -0.03896     -0.0399279
+   Translational kinetic energy     :            1.56452
+
+
+           STEP           TIME        E-TOTAL      E-KINETIC    E-POTENTIAL         VIRIAL       PRESSURE        SCALE-T
+
+           1400          6.995       -3596.63         1732.1       -5328.73       -5835.71        4.43891              1
+           1500          7.495       -3596.13        1769.31       -5365.44       -5584.48        4.31338              1
+
+
+   Total mass                       :               1000
+   Coordinates of the center of mass:            5.20649        5.22507        5.21857
+   Velocity of the center of mass   :         0.00411342       -0.03896     -0.0399279
+   Translational kinetic energy     :            1.56452
+
+
+ Averages:
+
+
+           STEP           TIME        E-TOTAL      E-KINETIC    E-POTENTIAL         VIRIAL       PRESSURE        SCALE-T
+
+           1500            7.5       -3596.62        1733.98        -5330.6       -5856.39        4.45215              1
+
+
+ Root mean square fluctuations:
+
+
+           STEP           TIME        E-TOTAL      E-KINETIC    E-POTENTIAL         VIRIAL       PRESSURE        SCALE-T
+
+           1500            7.5       0.758495        29.6034        29.6677        247.026       0.128114              0
+
+
+ Average temperature is       : 139.034
+ Root mean square fluctuations: 2.37365
+
+
+ Radial distribution function g(R) :
+
+        R             g(R)
+    0.0125              0
+    0.0375              0
+    0.0625              0
+    0.0875              0
+    0.1125              0
+    0.1375              0
+    0.1625              0
+    0.1875              0
+    0.2125              0
+    0.2375              0
+    0.2625              0
+    0.2875              0
+    0.3125              0
+    0.3375              0
+    0.3625              0
+    0.3875              0
+    0.4125              0
+    0.4375              0
+    0.4625              0
+    0.4875              0
+    0.5125              0
+    0.5375              0
+    0.5625              0
+    0.5875              0
+    0.6125              0
+    0.6375              0
+    0.6625              0
+    0.6875              0
+    0.7125              0
+    0.7375              0
+    0.7625              0
+    0.7875              0
+    0.8125              0
+    0.8375              0
+    0.8625    8.19885e-05
+    0.8875     0.00383311
+    0.9125      0.0490244
+    0.9375       0.270356
+    0.9625        0.78671
+    0.9875        1.51699
+    1.0125         2.2041
+    1.0375        2.61614
+    1.0625        2.71115
+    1.0875        2.63133
+    1.1125        2.42551
+    1.1375        2.17893
+    1.1625         1.9088
+    1.1875        1.66592
+    1.2125        1.45723
+    1.2375        1.28375
+    1.2625        1.12513
+    1.2875        1.00688
+    1.3125       0.904987
+    1.3375       0.823228
+    1.3625       0.764112
+    1.3875        0.71294
+    1.4125       0.674661
+    1.4375       0.645762
+    1.4625        0.62914
+    1.4875       0.612442
+    1.5125       0.606838
+    1.5375       0.610641
+    1.5625       0.607571
+    1.5875       0.620395
+    1.6125       0.641458
+    1.6375       0.661932
+    1.6625         0.6919
+    1.6875       0.735037
+    1.7125        0.76952
+    1.7375       0.821342
+    1.7625       0.872597
+    1.7875       0.920382
+    1.8125       0.971935
+    1.8375        1.01186
+    1.8625        1.05935
+    1.8875         1.1072
+    1.9125        1.14826
+    1.9375        1.18009
+    1.9625        1.20769
+    1.9875        1.22285
+    2.0125        1.23612
+    2.0375        1.24288
+    2.0625        1.24257
+    2.0875        1.23511
+    2.1125        1.21153
+    2.1375         1.1851
+    2.1625        1.15228
+    2.1875        1.11417
+    2.2125        1.07581
+    2.2375        1.03792
+    2.2625        1.00486
+    2.2875       0.970825
+    2.3125        0.93587
+    2.3375       0.909891
+    2.3625       0.890506
+    2.3875       0.873366
+    2.4125       0.855751
+    2.4375       0.844972
+    2.4625       0.841116
+    2.4875       0.841677
+
+
+ Timing:
+
+  At start of program         : Tue May  3 20:47:28 2022
+  Before main iteration loop  : Tue May  3 20:47:28 2022
+  After main iteration loop   : Tue May  3 20:47:45 2022
+  Now                         : Tue May  3 20:47:45 2022
+  Time spent for MD iterations: 16.1 sec
+  Time spent in total         : 16.2 sec
