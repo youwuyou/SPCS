@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/youwuyou/Workspaces/SPCS/ex01/build1",
+  "command": "/usr/bin/c++   -isystem /usr/include/eigen3  -Wall -Wpedantic -Wconversion -O3 -std=c++11   -std=gnu++14 -o CMakeFiles/exercise01.dir/main.cpp.o -c /home/youwuyou/Workspaces/SPCS/ex01/main.cpp",
+  "file": "/home/youwuyou/Workspaces/SPCS/ex01/main.cpp"
+},
+{
+  "directory": "/home/youwuyou/Workspaces/SPCS/ex01/build1",
+  "command": "/usr/bin/c++   -isystem /usr/include/eigen3  -Wall -Wpedantic -Wconversion -O3 -std=c++11   -std=gnu++14 -o CMakeFiles/exercise01.dir/include/monte_carlo.cpp.o -c /home/youwuyou/Workspaces/SPCS/ex01/include/monte_carlo.cpp",
+  "file": "/home/youwuyou/Workspaces/SPCS/ex01/include/monte_carlo.cpp"
+},
+{
+  "directory": "/home/youwuyou/Workspaces/SPCS/ex01/build1",
+  "command": "/usr/bin/c++   -isystem /usr/include/eigen3  -Wall -Wpedantic -Wconversion -O3 -std=c++11   -std=gnu++14 -o CMakeFiles/exercise01.dir/include/pretty.cpp.o -c /home/youwuyou/Workspaces/SPCS/ex01/include/pretty.cpp",
+  "file": "/home/youwuyou/Workspaces/SPCS/ex01/include/pretty.cpp"
+},
+{
+  "directory": "/home/youwuyou/Workspaces/SPCS/ex01/build1",
+  "command": "/usr/bin/c++   -isystem /usr/include/eigen3  -Wall -Wpedantic -Wconversion -O3 -std=c++11   -std=gnu++14 -o CMakeFiles/exercise01.dir/include/walk.cpp.o -c /home/youwuyou/Workspaces/SPCS/ex01/include/walk.cpp",
+  "file": "/home/youwuyou/Workspaces/SPCS/ex01/include/walk.cpp"
+}
+]

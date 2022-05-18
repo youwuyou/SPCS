@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wpedantic -Wconversion -O3 -std=c++11  -rdynamic CMakeFiles/exercise01.dir/main.cpp.o CMakeFiles/exercise01.dir/include/monte_carlo.cpp.o CMakeFiles/exercise01.dir/include/pretty.cpp.o CMakeFiles/exercise01.dir/include/walk.cpp.o  -o exercise01 
